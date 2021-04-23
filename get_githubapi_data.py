@@ -27,7 +27,8 @@ def get_repos_and_stars(username,api_token):
             output['repos'].append(
                 {
                     'name': repo['name'],
-                    'stargazers_count': repo['stargazers_count']
+                    'stargazers_count': repo['stargazers_count'],
+                    'repo_url':repo['url']
                 })
             total_stargazers += int(repo['stargazers_count'])
         current_page+=1
