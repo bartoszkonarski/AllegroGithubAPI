@@ -1,11 +1,11 @@
 import aiohttp
 import asyncio
-import time
+# import time
 import os
 import requests
 
 def get_repos_and_stars(username,api_token):
-    start_time = time.time()
+    # start_time = time.time()
     headers = {'Authorization': 'token '+api_token}
     response = requests.get(f"https://api.github.com/users/{username}",headers=headers)
     if response.status_code == 404:
@@ -15,7 +15,7 @@ def get_repos_and_stars(username,api_token):
     public_repos = response['public_repos']
     pages = public_repos//100+1
     export = {
-        'userdata' : {'username' : username, 'full_name' : response['name'],'repos_count' : public_repos},
+        'userdata' : {'username' : username, 'full_name' : response['name'],'user_url':response['html_url'],'repos_count' : public_repos},
         'repos' : []}
     output = []
 
@@ -46,13 +46,13 @@ def get_repos_and_stars(username,api_token):
                 stargazers+=repo['stargazers_count']
             return stargazers
 
-    # asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     stargazers = asyncio.run(main())
     
     export['userdata']['total_stargazers'] = stargazers
     export['repos']=sorted(output, key=lambda k: k['name'].lower()) 
 
-    print("--- %s seconds ---" % (time.time() - start_time))
+    # print("--- %s seconds ---" % (time.time() - start_time))
     return export
 
 if __name__ == "__main__":

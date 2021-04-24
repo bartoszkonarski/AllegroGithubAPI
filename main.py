@@ -10,6 +10,7 @@ api = Api(app)
 cache = Cache(app,config={'CACHE_TYPE':'SimpleCache'})
 app.config['JSON_SORT_KEYS'] = False
 app.config['GITHUB_API_TOKEN'] = os.environ['GITHUB_API_TOKEN']
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 class GithubUser(Resource):
     @cache.cached(timeout=60)
@@ -24,4 +25,4 @@ class GithubUser(Resource):
 api.add_resource(GithubUser,"/api/<string:username>")
 
 if __name__ == "__main__":
-    app.run(debug=False,port=33507)
+    app.run(debug=False)
