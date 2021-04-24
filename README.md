@@ -14,7 +14,7 @@ dla dowolnego użytkownika serwisu GitHub
 
 ## Instrukcja instalacji/uruchomienia:
 
-Publiczna dystrybucja: https://github-api-userdata.herokuapp.com/
+Publiczna dystrybucja: https://github-api-userdata.herokuapp.com/,  
 (endpointy mini-API dostępne pod https://github-api-userdata.herokuapp.com/api/{nazwa_użytkownika})
 
 Instalacja lokalna:
