@@ -24,4 +24,4 @@ class GithubUser(Resource):
 api.add_resource(GithubUser,"/api/<string:username>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
