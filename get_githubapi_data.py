@@ -46,7 +46,7 @@ def get_repos_and_stars(username,api_token):
                 stargazers+=repo['stargazers_count']
             return stargazers
 
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    # asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     stargazers = asyncio.run(main())
     
     export['userdata']['total_stargazers'] = stargazers
