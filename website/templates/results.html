@@ -1,9 +1,17 @@
 {% extends 'base.html' %} {%block results%}
 <div class="col-10 offset-1">
-	{% if data == None %} User not found {% else %}
+	{% if data == None %}
+	<h3>Podany użytkownik nie istnieje :(</h3>
+	<h5>
+		Proszę podać nazwę widoczną w adresie profilu na GitHub:
+		<u>www.github.com/<b>{nazwaużytkownika}</b></u>
+	</h5>
+	{% else %}
 	<h3>
-		Repozytoria użytkownika: {{data['userdata']['username']}}
-		({{data['userdata']['full_name']}})
+		Repozytoria użytkownika:
+		<a href="{{data['userdata']['user_url']}}"
+			>{{data['userdata']['username']}} ({{data['userdata']['full_name']}})
+		</a>
 	</h3>
 	<h4>
 		Liczba repozytoriów: {{data['userdata']['repos_count']}}, Gwiazdek łącznie:
