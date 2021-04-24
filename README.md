@@ -9,7 +9,7 @@ dla dowolnego użytkownika serwisu GitHub
 
 ## Zaimplementowane funkcjonalności:
 
-- zwracanie wyszczególninych danych w formacie JSON dostępnych dla zapytań HTTP typu GET poprzez mini-API pod endpointem: {adres_hosta}/api/{nazwa_użytkownika}
+- zwracanie wyszczególnionych danych w formacie JSON dla zapytań HTTP typu GET poprzez mini-API pod endpointem: {adres_hosta}/api/{nazwa_użytkownika}
 - prosta strona WWW, stanowiąca minimalistyczny frontend w celu bardziej przejrzystego i interaktywnego przedstawienia zwracanych danych
 
 ## Instrukcja instalacji/uruchomienia:
