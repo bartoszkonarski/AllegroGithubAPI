@@ -9,11 +9,11 @@ dla dowolnego użytkownika serwisu GitHub
 
 ## Zaimplementowane funkcjonalności:
 
-- zwracanie wyszczególninych danych w formacie JSON dostępnych pod endpointem: {adres_hosta}/api/{nazwa_użytkownika}
-- prosta strona WWW, stanowiąca minimalistyczny frontend w celu bardziej przejrzystego przedstawienia zwracanych danych
+- zwracanie wyszczególninych danych w formacie JSON dostępnych poprzez mini-API pod endpointem: {adres_hosta}/api/{nazwa_użytkownika}
+- prosta strona WWW, stanowiąca minimalistyczny frontend w celu bardziej przejrzystego i interaktywnego przedstawienia zwracanych danych
 
 ## Propozycje rozwoju projektu:
 
-- Implementacja równoległego wykonywania zapytań do GitHub API w celu skrócenia czasu odpowiedzi (szczególnie w przypadku użytkowników posiadających bardzo wiele repozytoriów, GitHub API pozwala na pobranie listy maksymalnie 100 repozytoriów jednocześnie)
+- Zmiana pozyskiwania danych przez aplikację strony WWW (obecnie wykonuje ona zapytanie HTTP do serwera na którym sama się znajduje - poprzez zaimplementowane mini-API)
 - Rozbudowa rodzajów pozyskiwanych danych
 - Zapis pozyskanych danych w bazie danych, w celu obserwacji rozwoju aktywności użytkowników/repozytoriów (np. poprzez generowanie cyklicznych raportów)

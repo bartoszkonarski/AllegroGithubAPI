@@ -25,10 +25,6 @@ def get_repos_and_stars(username,api_token):
             stargazers= await asyncio.gather(*tasks)
             return sum(stargazers)
 
-
-
-
-
     async def get_repos_data(session, current_page):
         url = f"https://api.github.com/users/{username}/repos"
 
