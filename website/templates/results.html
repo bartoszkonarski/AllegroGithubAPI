@@ -8,7 +8,8 @@
 	<ul class="list-group">
 		{%for repo in data['repos']%}
 		<li class="list-group-item">
-			<a href="{{repo['repo_url']}}">{{repo['name']}}</a>
+			<a href="{{repo['repo_url']}}">{{repo['name']}}</a> - gwiazdek:
+			{{repo['stargazers_count']}}
 		</li>
 		{%endfor%}
 	</ul>
