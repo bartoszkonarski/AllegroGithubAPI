@@ -1,10 +1,14 @@
 {% extends 'base.html' %} {%block results%}
 <div class="col-10 offset-1">
-	{% if data['message']%} User notfound {% else %}
+	{% if data == None %} User not found {% else %}
 	<h3>
 		Repozytoria użytkownika: {{data['userdata']['username']}}
 		({{data['userdata']['full_name']}})
 	</h3>
+	<h4>
+		Liczba repozytoriów: {{data['userdata']['repos_count']}}, Gwiazdek łącznie:
+		{{data['userdata']['total_stargazers']}}
+	</h4>
 	<ul class="list-group">
 		{%for repo in data['repos']%}
 		<li class="list-group-item">

@@ -12,8 +12,10 @@ def mainpage():
     form = UserNameForm(request.form)
     if request.method=='POST':
         username = request.form.get('username')
-        response = requests.get(f"http://localhost:5000/api/{username}").json()
-        return render_template("results.html",form=form,data=response)
+        response = requests.get(f"http://localhost:5000/api/{username}")
+        if response.status_code == 404:
+            return render_template("results.html",form=form,data=None)
+        return render_template("results.html",form=form,data=response.json())
     
     
     return render_template("base.html",form=form)

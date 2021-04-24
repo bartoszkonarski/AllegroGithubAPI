@@ -7,7 +7,11 @@ import requests
 def get_repos_and_stars(username,api_token):
     start_time = time.time()
     headers = {'Authorization': 'token '+api_token}
-    response = requests.get(f"https://api.github.com/users/{username}",headers=headers).json()
+    response = requests.get(f"https://api.github.com/users/{username}",headers=headers)
+    if response.status_code == 404:
+        return 404
+    else:
+        response=response.json()
     public_repos = response['public_repos']
     pages = public_repos//100+1
     export = {
