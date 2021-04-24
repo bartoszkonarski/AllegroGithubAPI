@@ -24,7 +24,8 @@ Instalacja lokalna:
    - ['GITHUB_API_TOKEN'] - jako wartość przypisujemy wartość personalnego tokena wygenerowanego w ustawieniach profilu GitHub (https://github.com/settings/tokens)
    - ['FLASK_APP_SECRET_KEY'] - jako wartość przypisujemy unikalny ciąg znaków będący kluczem sekretnym naszej aplikacji
 3. Dla środowiska Python (zaleca się stworzenie nowego wirtualnego środowiska) instalujemy potrzebne pakiety znajdujące się w pliku requirements.txt (polecenie: _pip install -r requirements.txt_ )
-4. Uruchamiamy aplikacje na lokalnym serwerze uruchamiając skrypt main.py (_python3 main.py_)
+4. Jeśli korzystamy z systemu innego niż Windows, należy zakomentować/usunąć linię 49 w pliku _get_githubapi_data.py_
+5. Uruchamiamy aplikacje na lokalnym serwerze uruchamiając skrypt main.py (_python3 main.py_)
 
 ## Propozycje rozwoju projektu:
 
