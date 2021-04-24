@@ -21,8 +21,8 @@ Instalacja lokalna:
 
 1. Należy pobrać zawartość gałęzi 'main' repozytorium.
 2. W systemie należy utworzyć następujące zmienne środowiskowe:
-   ['GITHUB_API_TOKEN'] - jako wartość przypisujemy wartość personalnego tokena wygenerowanego w ustawieniach profilu GitHub (https://github.com/settings/tokens)
-   ['FLASK_APP_SECRET_KEY'] - jako wartość przypisujemy unikalny ciąg znaków będący kluczem sekretnym naszej aplikacji
+   - ['GITHUB_API_TOKEN'] - jako wartość przypisujemy wartość personalnego tokena wygenerowanego w ustawieniach profilu GitHub (https://github.com/settings/tokens)
+   - ['FLASK_APP_SECRET_KEY'] - jako wartość przypisujemy unikalny ciąg znaków będący kluczem sekretnym naszej aplikacji
 3. Dla środowiska Python (zaleca się stworzenie nowego wirtualnego środowiska) instalujemy potrzebne pakiety znajdujące się w pliku requirements.txt (polecenie: _pip install -r requirements.txt_ )
 4. Uruchamiamy aplikacje na lokalnym serwerze uruchamiając skrypt main.py (_python3 main.py_)
 
