@@ -17,7 +17,7 @@ def get_repos_and_stars(username,api_token):
     current_page = 1
 
     output = {}
-    output['userdata'] = {'username' : username, 'repos_count' : public_repos}
+    output['userdata'] = {'username' : username, 'full_name' : response['name'],'repos_count' : public_repos}
     output['repos'] = []
     total_stargazers = 0
 
@@ -28,7 +28,7 @@ def get_repos_and_stars(username,api_token):
                 {
                     'name': repo['name'],
                     'stargazers_count': repo['stargazers_count'],
-                    'repo_url':repo['url']
+                    'repo_url':repo['html_url']
                 })
             total_stargazers += int(repo['stargazers_count'])
         current_page+=1

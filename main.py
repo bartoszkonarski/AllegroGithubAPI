@@ -3,8 +3,9 @@ from flask_restful import Api, Resource
 from get_githubapi_data import get_repos_and_stars
 from flask_caching import Cache
 import os
+from website import create_app
 
-app = Flask(__name__)
+app = create_app()
 api = Api(app)
 cache = Cache(app,config={'CACHE_TYPE':'SimpleCache'})
 app.config['JSON_SORT_KEYS'] = False

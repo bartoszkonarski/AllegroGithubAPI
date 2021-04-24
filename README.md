@@ -4,7 +4,8 @@ Zadanie polega na stworzeniu oprogramowania pozwalającego na:
 
 - listowanie repozytoriów (nazwa i liczba gwiazdek)
 - zwracania sumy gwiazdek
-  dla dowolnego użytkownika serwisu GitHub
+
+dla dowolnego użytkownika serwisu GitHub
 
 ## Zaimplementowane funkcjonalności:
 
@@ -15,3 +16,4 @@ Zadanie polega na stworzeniu oprogramowania pozwalającego na:
 
 - Implementacja równoległego wykonywania zapytań do GitHub API w celu skrócenia czasu odpowiedzi (szczególnie w przypadku użytkowników posiadających bardzo wiele repozytoriów, GitHub API pozwala na pobranie listy maksymalnie 100 repozytoriów jednocześnie)
 - Rozbudowa rodzajów pozyskiwanych danych
+- Zapis pozyskanych danych w bazie danych, w celu obserwacji rozwoju aktywności użytkowników/repozytoriów (np. poprzez generowanie cyklicznych raportów)
