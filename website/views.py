@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template,request
-# from flask_wtf import Form
 from wtforms import StringField, Form
 import requests
 views = Blueprint('views', __name__)

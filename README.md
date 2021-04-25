@@ -1,4 +1,6 @@
-# Allegro Summer e-Xperience 2021 - zadanie rekrutacyjne nr 3
+# Allegro Summer e-Xperience 2021
+
+# Zadanie rekrutacyjne nr 3
 
 Zadanie polega na stworzeniu oprogramowania pozwalającego na:
 
@@ -14,7 +16,7 @@ dla dowolnego użytkownika serwisu GitHub
 
 ## Instrukcja instalacji/uruchomienia:
 
-**Publiczna dystrybucja:** https://github-api-userdata.herokuapp.com/,  
+**Publiczne wdrożenie na platformie Heroku:** https://github-api-userdata.herokuapp.com/,  
 (endpointy mini-API dostępne pod https://github-api-userdata.herokuapp.com/api/{nazwa_użytkownika})
 
 Instalacja lokalna:
